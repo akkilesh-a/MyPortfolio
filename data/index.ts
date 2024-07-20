@@ -1,3 +1,4 @@
 import { gridItemsData } from "./GridData";
+import { projectItems } from "./ProjectsData";
 
-export { gridItemsData }
+export { gridItemsData, projectItems }
