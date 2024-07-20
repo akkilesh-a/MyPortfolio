@@ -52,7 +52,7 @@ const Hero = () => {
             {/* Typewriter Animation */}
             <TypewriterEffectSmooth className='text-xl' words={words} />
 
-            <p className='text-xs md:text-xl'>Hi, I'm Akkilesh!</p>
+            <p className='text-xs md:text-xl'>Hi, I&apos;m Akkilesh!</p>
 
             <a href='#about' >
                 <MagicButton text="Connect with me" icon={<FaLocationArrow />} position={"right"} otherClasses={"flex gap-4"}/>

@@ -57,7 +57,7 @@ export function Projects() {
                       target="__blank"
                       className="font-bold"
                     >
-                      <img width={40} src="/icons/world-www.svg" />
+                      <Image alt="link_icon" height={40} width={40} src="/icons/world-www.svg" />
                     </CardItem>
                     <CardItem
                       translateZ={20}
@@ -66,7 +66,7 @@ export function Projects() {
                       target="__blank"
                       className="font-bold"
                     >
-                      <img width={40} src="/icons/github.svg" />
+                      <Image alt="github_icon" height={40} width={40} src="/icons/github.svg" />
                     </CardItem>
                   </div>
                 </div>
