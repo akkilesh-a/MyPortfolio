@@ -11,19 +11,19 @@ const Hero = () => {
     const words = [
         {
           text: "Web Developer,",
-          className: "text-lg md:text-5xl text-white",
+          className: "text-xl sm:text-3xl md:text-5xl text-white",
         },
         {
           text: "Tech Enthusiast",
-            className: "text-lg md:text-5xl text-white",
+            className: "text-xl sm:text-3xl md:text-5xl text-white",
         },
         {
           text: "and",
-            className: "text-lg md:text-5xl text-white",
+            className: "text-xl sm:text-3xl md:text-5xl text-white",
         },
         {
           text: "Human.",
-          className: "text-lg md:text-5xl text-blue-500",
+          className: "text-xl sm:text-3xl md:text-5xl text-blue-500",
         },
       ];
 
@@ -45,12 +45,12 @@ const Hero = () => {
                 {/* Radial gradient for the container to give a faded look */}
             </div>
 
-            <p className="text-center text-3xl sm:text-8xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
+            <p className="text-center text-3xl sm:text-5xl md:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
                 You are in the presence of Greatness!
             </p>
 
             {/* Typewriter Animation */}
-            <TypewriterEffectSmooth words={words} className='flex items-baseline'/>
+            <TypewriterEffectSmooth words={words} className='flex items-baseline text-xl sm:text-3xl md:text-5xl'/>
 
             <p className='text-xs md:text-xl'>Hi, I&apos;m Akkilesh!</p>
 
