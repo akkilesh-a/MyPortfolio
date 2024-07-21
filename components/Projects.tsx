@@ -8,9 +8,9 @@ import Link from "next/link";
 
 export function Projects() {
   return (
-    <section id="projects" className="mt-32 text-white">
+    <section id="projects" className="mt-32 px-4 sm:px-16 text-white">
       <h1>A collection of My projects</h1>
-      <div className="flex flex-wrap gap-8 justify-center">
+      <div className="flex flex-wrap sm:gap-8 justify-around">
         {projectItems.map((item,index)=>{
           return(
             <CardContainer key={index} className="inter-var">
@@ -39,13 +39,14 @@ export function Projects() {
                     />
                   </a>
                 </CardItem>
-                <div className="flex justify-between items-center mt-20">
+                <div className="flex justify-between flex-col sm:flex-row gap-2 sm:gap-0 items-center mt-16 sm:mt-20">
+                  
                   <CardItem
                     translateZ={20}
                     
                     className="px-4 py-2 rounded-xl text-xs font-normal text-white"
                   >
-                    <div className="flex flex-row items-center justify-center w-full">
+                    <div className="flex">
                       <AnimatedTooltip items={item.techStacks} />
                     </div>
                   </CardItem>
