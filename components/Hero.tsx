@@ -30,9 +30,14 @@ const Hero = () => {
 
   return (
     <div className='w-screen h-screen overflow-hidden text-white' >
-        <Spotlight className='overflow-hidden -top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill='white' />
-        <Spotlight className='overflow-hidden top-50 left-[80%] h-[80vh] w-[50vw]' fill='purple' />
-        <Spotlight className='overflow-hidden top-100 left-[10%] h-[80vh] w-[50vw]' fill='blue' />
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20 h-screen"
+        fill="white"
+      />
+       <Spotlight
+        className="-top-40 left-0  md:left-40 md:-top-10 h-screen"
+        fill="blue"
+      />
         <Vortex
           backgroundColor="black"
           rangeY={800}
