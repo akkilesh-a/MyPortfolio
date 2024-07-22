@@ -3,18 +3,20 @@
 import Image from "next/image";
 import React from "react";
 import { projectItems } from "@/data";
-import { CardBody, CardContainer, CardItem, AnimatedTooltip } from "@/components/ui";
+import { CardBody, CardContainer, CardItem, AnimatedTooltip, Heading } from "@/components/ui";
 import Link from "next/link";
+import VortexWrapper from "./VortexWrapper";
 
 export function Projects() {
   return (
-    <section id="projects" className="mt-32 px-4 sm:px-16 text-white">
-      <h1>A collection of My projects</h1>
+    <VortexWrapper>
+      <section id="projects" className="text-white">
+      <Heading text={"A collection of My projects"}/>
       <div className="flex flex-wrap sm:gap-8 justify-around">
         {projectItems.map((item,index)=>{
           return(
             <CardContainer key={index} className="inter-var">
-              <CardBody className=" relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-neutral-500 border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className=" relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black-100 border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-white"
@@ -30,7 +32,9 @@ export function Projects() {
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <a href={`${item.deployedLink}`} target="__blank">
+                  { item.projectImage.includes(".gif") }
                     <Image
+                      
                       src={"/projects/"+item.projectImage}
                       height="1000"
                       width="1000"
@@ -77,5 +81,6 @@ export function Projects() {
         })}
       </div>
     </section>
+    </VortexWrapper>
   );
 }
