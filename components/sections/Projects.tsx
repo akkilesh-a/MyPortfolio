@@ -5,7 +5,7 @@ import React from "react";
 import { projectItems } from "@/data";
 import { CardBody, CardContainer, CardItem, AnimatedTooltip, Heading } from "@/components/ui";
 import Link from "next/link";
-import VortexWrapper from "./VortexWrapper";
+import VortexWrapper from "../VortexWrapper";
 
 export function Projects() {
   return (

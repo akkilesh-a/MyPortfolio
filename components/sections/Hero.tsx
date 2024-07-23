@@ -1,10 +1,9 @@
 'use client'
 
 import React from 'react'
-import {TypewriterEffectSmooth, MagicButton, Heading, Spotlight} from "./ui";
+import {TypewriterEffectSmooth, MagicButton, Heading, Spotlight} from "../ui";
 import { FaLocationArrow } from 'react-icons/fa6';
-import VortexWrapper from './VortexWrapper';
-
+import VortexWrapper from '../VortexWrapper';
 const Hero = () => {
 
     const words = [

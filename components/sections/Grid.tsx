@@ -1,7 +1,7 @@
 import { Bentham } from 'next/font/google'
 import React from 'react'
-import { Vortex } from './ui'
-import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
+import { Vortex } from '../ui'
+import { BentoGrid, BentoGridItem } from '../ui/BentoGrid'
 import { gridItemsData } from '@/data'
 
 const Grid = () => {
@@ -13,7 +13,7 @@ const Grid = () => {
           rangeY={800}
           particleCount={300}
           baseHue={220}
-          className="h-[80vh] p-4 md:p-0 overflow-hidden flex flex-col items-center justify-center md:h-screen"
+          className=""
         >
         <BentoGrid className="max-w-4xl mx-auto">
           {gridItemsData.map((item, i) => (
