@@ -36,7 +36,7 @@ const Hero = () => {
         className="-top-40 left-0  md:left-40 md:-top-10 h-screen"
         fill="blue"
       />
-      <div>
+      <div className='absolute bottom-10 right-10'>
         <h1>Building in progress!😊</h1>
       </div>
       <VortexWrapper>
