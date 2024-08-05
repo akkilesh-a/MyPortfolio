@@ -26,7 +26,7 @@ export default function Home() {
         },
       ]} />
       <Hero />
-      <Grid />   
+      {/* <Grid />    */}
       <Projects />  
       <Badges />  
     </main>
