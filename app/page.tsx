@@ -1,9 +1,9 @@
 'use client'
 
-import { Hero, Badges, Grid, Projects } from "@/components/sections";
+import { Hero, Badges, Projects } from "@/components/sections";
 import { FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
-import { FaComputer, FaUser } from "react-icons/fa6";
+import { FaComputer, FaIdBadge, FaRegIdBadge, FaUser } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -24,9 +24,13 @@ export default function Home() {
           link: "#projects",
           icon: <FaComputer />,
         },
+        {
+          name: "Badges",
+          link: "#badges",
+          icon: <FaIdBadge />,
+        },
       ]} />
       <Hero />
-      {/* <Grid />    */}
       <Projects />  
       <Badges />  
     </main>

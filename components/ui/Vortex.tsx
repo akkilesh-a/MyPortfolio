@@ -19,7 +19,7 @@ interface VortexProps {
 
 export const Vortex = (props: VortexProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const particleCount = props.particleCount || 700;
   const particlePropCount = 9;
   const particlePropsLength = particleCount * particlePropCount;
@@ -61,7 +61,7 @@ export const Vortex = (props: VortexProps) => {
       const ctx = canvas.getContext("2d");
 
       if (ctx) {
-        resize(canvas, ctx);
+        resize(canvas, container, ctx);
         initParticles();
         draw(canvas, ctx);
       }
@@ -70,7 +70,6 @@ export const Vortex = (props: VortexProps) => {
 
   const initParticles = () => {
     tick = 0;
-    // simplex = new SimplexNoise();
     particleProps = new Float32Array(particlePropsLength);
 
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
@@ -187,12 +186,13 @@ export const Vortex = (props: VortexProps) => {
 
   const resize = (
     canvas: HTMLCanvasElement,
+    container: HTMLDivElement,
     ctx?: CanvasRenderingContext2D
   ) => {
-    const { innerWidth, innerHeight } = window;
+    const { clientWidth, clientHeight } = container;
 
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+    canvas.width = clientWidth;
+    canvas.height = clientHeight;
 
     center[0] = 0.5 * canvas.width;
     center[1] = 0.5 * canvas.height;
@@ -229,20 +229,24 @@ export const Vortex = (props: VortexProps) => {
     setup();
     window.addEventListener("resize", () => {
       const canvas = canvasRef.current;
+      const container = containerRef.current;
       const ctx = canvas?.getContext("2d");
-      if (canvas && ctx) {
-        resize(canvas, ctx);
+      if (canvas && ctx && container) {
+        resize(canvas, container, ctx);
       }
     });
   }, []);
 
   return (
-    <div className={cn("relative ", props.containerClassName)}>
+    <div
+      ref={containerRef}
+      className={cn("relative w-full h-full", props.containerClassName)}
+      style={{ minHeight: "100vh" }} // Ensures the wrapper takes at least the full viewport height
+    >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        ref={containerRef}
-        className="absolute inset-0 z-0 bg-transparent flex items-center justify-center"
+        className="absolute inset-0 z-0 bg-transparent"
       >
         <canvas ref={canvasRef}></canvas>
       </motion.div>

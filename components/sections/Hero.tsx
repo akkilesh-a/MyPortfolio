@@ -36,7 +36,7 @@ const Hero = () => {
         className="-top-40 left-0  md:left-40 md:-top-10 h-screen"
         fill="blue"
       />
-      <div className='absolute bottom-10 right-10'>
+      <div className='fixed p-8 rounded text-white bg-black-100 z-50 text-xl bottom-10 right-10'>
         <h1>Building in progress!😊</h1>
       </div>
       <VortexWrapper>
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
 
         <div className='h-screen flex justify-center flex-col items-center'>
-          <Heading text={"You are in the presence of Greatness!😉"}/>
+          <Heading text={"You are in the presence of Greatness!"}/>
 
           {/* Typewriter Animation */}
           <TypewriterEffectSmooth words={words} className='flex items-baseline '/>

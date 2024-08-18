@@ -1,39 +1,46 @@
 import React from 'react'
-import { PinContainer } from '../ui'
 import VortexWrapper from '../VortexWrapper';
 import { badgesData } from '@/data';
 import Image from 'next/image';
+import { BackgroundGradient } from '../ui/BackgroundGradient';
+import { Heading } from '../ui';
 
 const Badges = () => {
   return (
     <VortexWrapper>
-        <div className='flex justify-center flex-wrap'>
-            {badgesData.map(({href,name,description,fileName},index)=>{
-                return(
-                    <div key={index} className=" flex items-center m-2 justify-center ">
-                        <PinContainer
-                            title="/Verify"
-                            href={href}
-                            className='bg-black-100'
-                        >
-                            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[auto] ">
-                                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                                    {name}
-                                </h3>
-                                <div className="text-base !m-0 !p-0 font-normal">
-                                    <span className="text-slate-500 ">
-                                    {description}
+        <section id="badges" className="text-white flex flex-col gap-16">
+            <Heading text={"Badges that i've earned"}/>
+            <div className='flex justify-center flex-wrap gap-16'>
+                {badgesData.map(({href,name,description,fileName},index)=>{
+                    return(
+                        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+                            <Image
+                            src={`/badges/${fileName}`}
+                            alt="jordans"
+                            height="200"
+                            width="200"
+                            className="object-contain"
+                            />
+                            <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+                            {name}
+                            </p>
+                    
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                            {description}
+                            </p>
+                            <a href={href}>
+                                <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                                    <span>Verify</span>
+                                    <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
+                                        $100
                                     </span>
-                                </div>
-                                <div className="flex flex-1 w-full justify-center rounded-lg mt-4" >
-                                    <Image width={250} height={300} src={`/badges/${fileName}`} alt={name} />
-                                </div>
-                            </div>
-                        </PinContainer>
-                    </div>
-                )
-            })}
-        </div>
+                                </button>
+                            </a>
+                        </BackgroundGradient>
+                    )
+                })}
+            </div>     
+        </section>   
     </VortexWrapper>
   )
 }

@@ -7,10 +7,10 @@ const VortexWrapper = ({children, otherClasses}:{children:ReactNode,otherClasses
   return (
     <Vortex
         backgroundColor="black"
-        rangeY={800}
+        rangeY={1000}
         particleCount={100}
         baseHue={220}
-        className={`min-h-screen ${otherClasses}`}
+        className={` ${otherClasses}`}
     >
         {children}
     </Vortex>
