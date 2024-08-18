@@ -13,7 +13,7 @@ const Badges = () => {
             <div className='flex justify-center flex-wrap gap-16'>
                 {badgesData.map(({href,name,description,fileName},index)=>{
                     return(
-                        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+                        <BackgroundGradient key={index} className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
                             <Image
                             src={`/badges/${fileName}`}
                             alt="jordans"
