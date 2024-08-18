@@ -4,6 +4,7 @@ import { Hero, Badges, Projects } from "@/components/sections";
 import { FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
 import { FaComputer, FaIdBadge, FaRegIdBadge, FaUser } from "react-icons/fa6";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
