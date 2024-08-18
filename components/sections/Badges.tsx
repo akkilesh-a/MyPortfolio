@@ -9,7 +9,7 @@ const Badges = () => {
   return (
     <VortexWrapper>
         <section id="badges" className="text-white flex flex-col gap-16">
-            <Heading text={"Badges that i've earned"}/>
+            <Heading text={"Badges "}/>
             <div className='flex justify-center flex-wrap gap-16'>
                 {badgesData.map(({href,name,description,fileName},index)=>{
                     return(
