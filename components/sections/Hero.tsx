@@ -53,7 +53,7 @@ const Hero = () => {
 
           <p className='text-xs md:text-xl'>Hi, I&apos;m Akkilesh!</p>
 
-          <a href='#about' >
+          <a href='https://www.linkedin.com/in/akkilesh-a-620561275/' target='_blank' >
               <MagicButton text="Connect with me" icon={<FaLocationArrow />} position={"right"} otherClasses={"flex gap-4"}/>
           </a>
         </div>

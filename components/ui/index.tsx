@@ -9,6 +9,7 @@ import { BentoGrid } from "./BentoGrid";
 import { CardBody, CardContainer, CardItem } from "./3dCard"
 import { AnimatedTooltip } from "./AnimatedToolTip";
 import Heading from "./Heading";
+import { FloatingDock } from "./FloatingDock";
 
 export {
     TypewriterEffectSmooth, 
@@ -23,5 +24,6 @@ export {
     CardContainer, 
     CardItem, 
     AnimatedTooltip,
-    Heading
+    Heading,
+    FloatingDock
 }

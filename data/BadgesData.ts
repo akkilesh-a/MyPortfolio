@@ -1,7 +1,7 @@
 export const badgesData=[
     {
         href: "https://badgr.com/public/assertions/4I39DxpuS0SecNwWquafDw?identity__email=akkilalagar05@gmail.com",
-        name: "Postman API Fundamentals Student Expert",
+        name: "Postman API Student Expert",
         description: "Postman Student Expert Badge",
         fileName:"PostmanAPIFundamentals.png"
     },

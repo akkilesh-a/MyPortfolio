@@ -1,9 +1,9 @@
 'use client'
 
-import { Hero, Badges, Projects } from "@/components/sections";
-import { FloatingNav } from "@/components/ui";
+import { Hero, Badges, Projects, CollabProjects } from "@/components/sections";
+import { BentoGrid, FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
-import { FaComputer, FaIdBadge, FaRegIdBadge, FaUser } from "react-icons/fa6";
+import { FaComputer, FaIdBadge, FaRegIdBadge, FaUser, FaUserGroup } from "react-icons/fa6";
 import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
@@ -16,14 +16,14 @@ export default function Home() {
           icon: <FaHome />,
         },
         {
-          name: "About",
-          link: "#about",
-          icon: <FaUser />,
-        },
-        {
           name: "Projects",
           link: "#projects",
           icon: <FaComputer />,
+        },
+        {
+          name: "Collab Work",
+          link: "#collabWork",
+          icon: <FaUserGroup />,
         },
         {
           name: "Badges",
@@ -32,7 +32,9 @@ export default function Home() {
         },
       ]} />
       <Hero />
-      <Projects />  
+      <Projects /> 
+      <CollabProjects />
+      <BentoGrid /> 
       <Badges />  
     </main>
   );
