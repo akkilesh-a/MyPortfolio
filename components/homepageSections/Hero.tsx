@@ -42,11 +42,10 @@ const Hero = () => {
       <VortexWrapper>
         {/* Grid Backgorund */}
         <div className="absolute h-screen w-full bg-grid-white/[0.03] flex items-center justify-center">
-          {/* Radial gradient for the container to give a faded look */}
         </div>
 
         <div className='h-screen flex justify-center flex-col items-center'>
-          <Heading text={"You are in the presence of Greatness!"}/>
+          <Heading text={"You are in the presence of Greatness! 🤗"}/>
 
           {/* Typewriter Animation */}
           <TypewriterEffectSmooth words={words} className='flex items-baseline '/>

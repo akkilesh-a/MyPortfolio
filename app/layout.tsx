@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akkil's Portfolio",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className}  bg-customBackground customBackground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
