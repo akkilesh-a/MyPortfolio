@@ -60,6 +60,9 @@ export const FloatingNav = ({
           className
         )}
       >
+        <div className="md:block hidden">
+          Too lazy to scroll? 👉
+        </div>
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}

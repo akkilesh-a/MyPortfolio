@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  bg-customBackground customBackground`}>
+      <body className={`${inter.className} cursor-custom  bg-customBackground customBackground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
