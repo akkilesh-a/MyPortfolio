@@ -2,7 +2,7 @@ export const shinySocials=[
     {
         name: 'Linked In',
         url: 'https://www.linkedin.com/in/akkilesh-a-620561275/',
-        icon: '/shinyFooterIcons/linkedIn.png'
+        icon: '/shinyFooterIcons/linkedin.png'
     },
     {
         name: 'GitHub',
