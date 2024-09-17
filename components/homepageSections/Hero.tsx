@@ -56,13 +56,23 @@ const Hero = () => {
               <MagicButton text="Connect with me" icon={<FaLocationArrow />} position={"right"} otherClasses={"flex gap-4"}/>
           </a>
         </div>
-        <Image
-          src="/ProfilePic.png"
-          alt="avatar"
-          height="400"
-          width="400"
-          className="rounded-full absolute bottom-0 right-0 md:right-20 md:bottom-20 "
-        />      
+       <div className='md:block hidden'>
+          <p className='text-xs md:text-xl  absolute bottom-40 right-80 md:right-96 rotate-45 md:bottom-36 z-30'>This is Me! 😁</p>
+          <Image 
+            src="/arrow.gif" 
+            alt="avatar" 
+            width={100} 
+            height={10} 
+            className=' absolute bottom-40 right-80 md:right-80 rotate-45 md:bottom-40 z-30'
+            />
+          <Image
+            src="/ProfilePic.png"
+            alt="avatar"
+            height="400"
+            width="400"
+            className="rounded-full  absolute bottom-0 right-0 md:right-10 md:bottom-20 "
+          />      
+       </div>
         </VortexWrapper>
     </div>
   )
