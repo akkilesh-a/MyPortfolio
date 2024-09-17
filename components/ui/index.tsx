@@ -4,7 +4,6 @@ import { Spotlight } from "./Spotlight";
 import { Vortex } from "./Vortex";
 import MagicButton from "./MagicButton";
 import { FloatingNav } from "./FloatingNav";
-import { TracingBeam } from "./TracingBeam";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 import { CardBody, CardContainer, CardItem } from "./3dCard"
 import { AnimatedTooltip } from "./AnimatedToolTip";
@@ -18,7 +17,6 @@ export {
     Spotlight,
     MagicButton, 
     FloatingNav, 
-    TracingBeam, 
     BentoGrid, 
     BentoGridItem,
     CardBody, 

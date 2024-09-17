@@ -1,6 +1,6 @@
 'use client'
 
-import { Hero, Badges, Projects, CollabProjects, About } from "@/components/homepageSections";
+import { Hero, Badges, Projects, CollabProjects, About, Footer } from "@/components/homepageSections";
 import { BentoGrid, FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
 import { FaComputer, FaIdBadge, FaRegIdBadge, FaUser, FaUserGroup } from "react-icons/fa6";
@@ -17,13 +17,18 @@ export default function Home() {
           icon: <FaHome />,
         },
         {
+          name: "About",
+          link: "#about",
+          icon: <FaUser />,
+        },
+        {
           name: "Projects",
           link: "#projects",
           icon: <FaComputer />,
         },
         {
-          name: "Collab Work",
-          link: "#collabWork",
+          name: "Collab Projects",
+          link: "#collabProjects",
           icon: <FaUserGroup />,
         },
         {
@@ -37,6 +42,7 @@ export default function Home() {
       <Projects /> 
       <CollabProjects />
       <Badges />  
+      <Footer />
     </main>
   );
 }

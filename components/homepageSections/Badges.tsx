@@ -7,7 +7,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Badges = () => {
   return (
-    <VortexWrapper>
+    <VortexWrapper otherClasses="w-screen px-8 py-8">
         <section id="badges" className="text-white flex flex-col gap-16">
             <Heading text={"Badges "}/>
             <div className='flex flex-col sm:flex-row items-center justify-center flex-wrap gap-16'>

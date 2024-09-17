@@ -241,7 +241,7 @@ export const Vortex = (props: VortexProps) => {
     <div
       ref={containerRef}
       className={cn("relative w-full h-full", props.containerClassName)}
-      style={{ minHeight: "100vh" }} // Ensures the wrapper takes at least the full viewport height
+      style={{ minHeight: "" }} // Ensures the wrapper takes at least the full viewport height
     >
       <motion.div
         initial={{ opacity: 0 }}

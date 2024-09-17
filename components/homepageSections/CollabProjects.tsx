@@ -9,8 +9,8 @@ import VortexWrapper from "../VortexWrapper";
 
 export function CollabProjects() {
   return (
-    <VortexWrapper otherClasses="">
-      <section id="collabProjects" className="text-white">
+    <VortexWrapper otherClasses="w-screen px-8 py-8">
+      <section id="collabProjects" className="flex flex-col gap-16">
         <Heading text={"Collaborative Ventures"}/>
         <div className="flex flex-col items-center sm:flex-row gap-16 flex-wrap justify-center">
           {collabProjectItems.map((item,index)=>{

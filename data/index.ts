@@ -1,11 +1,11 @@
-import { gridItemsData } from "./GridData";
 import { projectItems } from "./ProjectsData";
 import { badgesData } from "./BadgesData";
 import {collabProjectItems } from "./CollabProjectsData"
+import { shinySocials } from "./FooterData";
 
 export { 
-    gridItemsData, 
     projectItems, 
     badgesData, 
-    collabProjectItems 
+    collabProjectItems,
+    shinySocials
 }

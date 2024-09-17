@@ -9,9 +9,9 @@ import VortexWrapper from "../VortexWrapper";
 
 export function Projects() {
   return (
-    <VortexWrapper otherClasses="px-16">
-      <section id="projects" className="text-white">
-        <Heading text={"Recent Project."}/>
+    <VortexWrapper otherClasses="w-screen px-8 py-8">
+      <section id="projects" className="flex flex-col gap-8">
+        <Heading text={"Recent Projects"}/>
         <div className="flex gap-8 flex-wrap justify-center">
           {projectItems.map((item,index)=>{
             if(index<3){return(
