@@ -11,12 +11,12 @@ export function Projects() {
   return (
     <VortexWrapper otherClasses="px-16">
       <section id="projects" className="text-white">
-        <Heading text={"Things I made recently..."}/>
+        <Heading text={"Recent Project."}/>
         <div className="flex gap-8 flex-wrap justify-center">
           {projectItems.map((item,index)=>{
             if(index<3){return(
               <CardContainer key={index} className="">
-                <CardBody className=" relative group/card bg-gray-400 hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-opacity-10 border-white/[0.2] w-[80vw] sm:w-[25rem] h-auto rounded-xl p-4 pt-6 border  ">
+                <CardBody className=" relative group/card bg-gray-400 hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-opacity-10 backdrop-blur-md border-white/[0.2] w-[80vw] sm:w-[25rem] h-auto rounded-xl p-4 pt-6 border  ">
                   <CardItem
                     translateZ="50"
                     className="text-xl font-bold text-white"

@@ -10,8 +10,8 @@ import VortexWrapper from "../VortexWrapper";
 export function CollabProjects() {
   return (
     <VortexWrapper otherClasses="">
-      <section id="projects" className="text-white">
-        <Heading text={"Things I made recently..."}/>
+      <section id="collabProjects" className="text-white">
+        <Heading text={"Collaborative Ventures"}/>
         <div className="flex flex-col items-center sm:flex-row gap-16 flex-wrap justify-center">
           {collabProjectItems.map((item,index)=>{
             if(index<3){return(
