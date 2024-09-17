@@ -2,7 +2,6 @@ import React from 'react'
 import VortexWrapper from '../VortexWrapper';
 import { badgesData } from '@/data';
 import Image from 'next/image';
-import { BackgroundGradient } from '../ui/BackgroundGradient';
 import { Heading } from '../ui';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -14,7 +13,7 @@ const Badges = () => {
             <div className='flex flex-col sm:flex-row items-center justify-center flex-wrap gap-16'>
                 {badgesData.map(({href,name,description,fileName},index)=>{
                     return(
-                        <BackgroundGradient key={index} className="rounded-[22px] sm:max-w-[25vw] max-w-[60vw] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+                        <div key={index} className="rounded-[22px] sm:max-w-[25vw] max-w-[60vw] p-4 sm:p-10 bg-gray-400 bg-opacity-10">
                             <Image
                             src={`/badges/${fileName}`}
                             alt="jordans"
@@ -37,7 +36,7 @@ const Badges = () => {
                                     </span>
                                 </button>
                             </a>
-                        </BackgroundGradient>
+                        </div>
                     )
                 })}
             </div>     

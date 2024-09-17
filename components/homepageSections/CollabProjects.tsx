@@ -9,15 +9,14 @@ import VortexWrapper from "../VortexWrapper";
 
 export function CollabProjects() {
   return (
-    <VortexWrapper>
-      <section id="collabWork" className="text-white">
-        <Heading text={"Things I worked on!"}/>
-        <div className="flex gap-8 flex-wrap justify-center">
+    <VortexWrapper otherClasses="">
+      <section id="projects" className="text-white">
+        <Heading text={"Things I made recently..."}/>
+        <div className="flex flex-col items-center sm:flex-row gap-16 flex-wrap justify-center">
           {collabProjectItems.map((item,index)=>{
-            return(
-              <CardContainer key={index} className="inter-var ">
-                <CardBody className=" relative group/card bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-gray-100
-  hover:shadow-2xl hover:shadow-emerald-500/[0.1]  border-white/[0.2] w-auto sm:w-[25rem] h-auto rounded-xl p-6 border  ">
+            if(index<3){return(
+              <CardContainer key={index} className="">
+                <CardBody className=" relative group/card bg-gray-400 hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-opacity-10 border-white/[0.2] w-[80vw] sm:w-[25rem] h-auto rounded-xl p-4 pt-6 border  ">
                   <CardItem
                     translateZ="50"
                     className="text-xl font-bold text-white"
@@ -33,7 +32,6 @@ export function CollabProjects() {
                   </CardItem>
                   <CardItem translateZ="100" className="w-full mt-4">
                     <a href={`${item.deployedLink}`} target="__blank">
-                    { item.projectImage.includes(".gif") }
                       <Image
                         
                         src={"/collabProjects/"+item.projectImage}
@@ -46,15 +44,6 @@ export function CollabProjects() {
                   </CardItem>
                   <div className="flex justify-center flex-col sm:flex-row gap-2 sm:gap-0 items-center mt-4">
                     
-                    {/* <CardItem
-                      translateZ={20}
-                      
-                      className="px-4 py-2 rounded-xl text-xs font-normal text-white"
-                    >
-                      <div className="flex">
-                        <AnimatedTooltip items={item.techStacks} />
-                      </div>
-                    </CardItem> */}
                     <div className="flex gap-2">
                       <CardItem
                         translateZ={20}
@@ -78,7 +67,7 @@ export function CollabProjects() {
                   </div>
                 </CardBody>
               </CardContainer>
-            )
+            )}
           })}
         </div>
       </section>

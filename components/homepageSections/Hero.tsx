@@ -4,6 +4,7 @@ import React from 'react'
 import {TypewriterEffectSmooth, MagicButton, Heading, Spotlight} from "../ui";
 import { FaLocationArrow } from 'react-icons/fa6';
 import VortexWrapper from '../VortexWrapper';
+import Image from 'next/image';
 const Hero = () => {
 
     const words = [
@@ -24,7 +25,6 @@ const Hero = () => {
           className: " text-blue-500",
         },
       ];
-
 
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center text-white' >
@@ -56,7 +56,14 @@ const Hero = () => {
               <MagicButton text="Connect with me" icon={<FaLocationArrow />} position={"right"} otherClasses={"flex gap-4"}/>
           </a>
         </div>
-      </VortexWrapper>
+        <Image
+          src="/ProfilePic.png"
+          alt="avatar"
+          height="400"
+          width="400"
+          className="rounded-full absolute bottom-0 right-0 md:right-20 md:bottom-20 "
+        />      
+        </VortexWrapper>
     </div>
   )
 }

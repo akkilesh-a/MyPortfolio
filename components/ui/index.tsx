@@ -5,7 +5,7 @@ import { Vortex } from "./Vortex";
 import MagicButton from "./MagicButton";
 import { FloatingNav } from "./FloatingNav";
 import { TracingBeam } from "./TracingBeam";
-import { BentoGrid } from "./BentoGrid";
+import { BentoGrid, BentoGridItem } from "./BentoGrid";
 import { CardBody, CardContainer, CardItem } from "./3dCard"
 import { AnimatedTooltip } from "./AnimatedToolTip";
 import Heading from "./Heading";
@@ -20,6 +20,7 @@ export {
     FloatingNav, 
     TracingBeam, 
     BentoGrid, 
+    BentoGridItem,
     CardBody, 
     CardContainer, 
     CardItem, 

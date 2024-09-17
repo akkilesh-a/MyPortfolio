@@ -1,10 +1,11 @@
 'use client'
 
-import { Hero, Badges, Projects, CollabProjects } from "@/components/homepageSections";
+import { Hero, Badges, Projects, CollabProjects, About } from "@/components/homepageSections";
 import { BentoGrid, FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
 import { FaComputer, FaIdBadge, FaRegIdBadge, FaUser, FaUserGroup } from "react-icons/fa6";
 import { Analytics } from "@vercel/analytics/react"
+import VortexWrapper from "@/components/VortexWrapper";
 
 export default function Home() {
   return (
@@ -32,9 +33,9 @@ export default function Home() {
         },
       ]} />
       <Hero />
+      <About />
       <Projects /> 
       <CollabProjects />
-      <BentoGrid /> 
       <Badges />  
     </main>
   );
