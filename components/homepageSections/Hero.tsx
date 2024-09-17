@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
 
         <div className='h-screen flex justify-center flex-col items-center'>
-          <Heading text={"You are in the presence of Greatness! 🤗"}/>
+          <Heading text={"You are in the presence of Greatness! "} emoji='🤗'/>
 
           {/* Typewriter Animation */}
           <TypewriterEffectSmooth words={words} className='flex items-baseline '/>
