@@ -12,3 +12,12 @@ export const badgesData=[
         fileName:"DeFy'24.png"
     }
 ]
+
+export const certificatesData=[
+    {
+        href: "ude.my/UC-fca5d6a5-2035-4ce6-9072-a47e2aa828a8",
+        name: "Web Dev Bootcamp",
+        description: "Web Development Bootcamp 2024 ",
+        fileName:"WebDevBootcamp.jpg"
+    }
+]
