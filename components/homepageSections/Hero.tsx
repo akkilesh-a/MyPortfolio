@@ -27,7 +27,7 @@ const Hero = () => {
       ];
 
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center text-white' >
+    <div className='w-screen  h-screen flex flex-col justify-center items-center text-white' >
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20 h-screen"
         fill="white"
@@ -36,7 +36,7 @@ const Hero = () => {
         className="-top-40 left-0  md:left-40 md:-top-10 h-screen"
         fill="blue"
       />
-      <VortexWrapper otherClasses="w-screen px-8 py-8">
+      <VortexWrapper otherClasses="scale-90 w-screen px-8 py-8">
         {/* Grid Backgorund */}
         <div className="absolute h-screen w-full bg-grid-white/[0.03] flex items-center justify-center">
         </div>

@@ -9,6 +9,9 @@ import { CardBody, CardContainer, CardItem } from "./3dCard"
 import { AnimatedTooltip } from "./AnimatedToolTip";
 import Heading from "./Heading";
 import { FloatingDock } from "./FloatingDock";
+import IconCloud from "./icon-cloud";
+import Globe from "./globe";
+import MouseFollower from "./MouseFollower";
 
 export {
     TypewriterEffectSmooth, 
@@ -24,5 +27,8 @@ export {
     CardItem, 
     AnimatedTooltip,
     Heading,
-    FloatingDock
+    FloatingDock,
+    IconCloud,
+    Globe,
+    MouseFollower
 }

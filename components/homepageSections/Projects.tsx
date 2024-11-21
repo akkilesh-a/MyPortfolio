@@ -9,7 +9,7 @@ import VortexWrapper from "../VortexWrapper";
 
 export function Projects() {
   return (
-    <VortexWrapper otherClasses="w-screen px-8 py-8">
+    <VortexWrapper otherClasses="w-screen scale-75 px-8 py-8">
       <section id="projects" className="flex flex-col gap-8">
         <Heading text={"Recent Projects"}/>
         <div className="flex gap-8 flex-wrap justify-center">
