@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem, Globe, Heading } from "@/components/ui";
+import { BentoGrid, BentoGridItem, Globe, Heading, IconCloud } from "@/components/ui";
 import {
   IconBoxAlignRightFilled,
   IconClipboardCopy,
@@ -12,12 +12,14 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import VortexWrapper from "../VortexWrapper";
-import { FaGlobeAfrica } from "react-icons/fa";
-import { FaPersonRifle } from "react-icons/fa6";
+import { FaGlobeAfrica, FaSuitcase } from "react-icons/fa";
+import { FaCode, FaPersonRifle, FaUser } from "react-icons/fa6";
+import { techStacks } from "@/data";
+import GitHubCalendar from "react-github-calendar"
 
 export function About() {
   return (
-    <VortexWrapper otherClasses="scale-90 w-screen px-8 py-8">
+    <VortexWrapper otherClasses=" w-screen px-8 py-8">
       <section id="about" className="flex flex-col gap-16">
           <Heading text={"About Me"} />
           <BentoGrid className="  mx-auto md:auto-rows-[20rem]">
@@ -52,43 +54,11 @@ const SkeletonOne = () => {
   )
 };
 const SkeletonTwo = () => {
-  const variants = {
-    initial: {
-      width: 0,
-    },
-    animate: {
-      width: "100%",
-      transition: {
-        duration: 0.2,
-      },
-    },
-    hover: {
-      width: ["0%", "100%"],
-      transition: {
-        duration: 2,
-      },
-    },
-  };
-  const arr = new Array(6).fill(0);
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
-    >
-      {arr.map((_, i) => (
-        <motion.div
-          key={"skelenton-two" + i}
-          variants={variants}
-          style={{
-            maxWidth: Math.random() * (100 - 40) + 40 + "%",
-          }}
-          className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
-        ></motion.div>
-      ))}
-    </motion.div>
-  );
+  return(
+    <div className="relative flex justify-center size-full items-center overflow-hidden">
+      <IconCloud iconSlugs={techStacks} />
+    </div>
+  )
 };
 const SkeletonThree = () => {
   const variants = {
@@ -121,86 +91,11 @@ const SkeletonThree = () => {
   );
 };
 const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
-    >
-      <motion.div
-        variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <Image
-          src="https://lh3.googleusercontent.com/a/ACg8ocLfPHEAtbV2DdWn-G31G1FdkDUUKCqkwo8b4vWSUsdJ3-iVWyPQBA=s432-c-no"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
-        </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
-        </p>
-      </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-        <Image
-          src="https://lh3.googleusercontent.com/a/ACg8ocLfPHEAtbV2DdWn-G31G1FdkDUUKCqkwo8b4vWSUsdJ3-iVWyPQBA=s432-c-no"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
-        </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <Image
-          src="https://lh3.googleusercontent.com/a/ACg8ocLfPHEAtbV2DdWn-G31G1FdkDUUKCqkwo8b4vWSUsdJ3-iVWyPQBA=s432-c-no"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
-        </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
-        </p>
-      </motion.div>
-    </motion.div>
-  );
+return(
+  <div className="">
+    <GitHubCalendar username="Akkilesh-A" />
+  </div>
+)
 };
 const SkeletonFive = () => {
   return(
@@ -354,47 +249,45 @@ const items = [
     title: "Yes! this is my face",
     description: (
       <span className="text-sm">
-        It's me Akkilesh, the creator of this website.
+        It&apos;s me Akkilesh, the creator of this website.
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <FaPersonRifle className="h-4 w-4 text-neutral-500" />,
+    icon: <FaUser className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Automated Proofreading",
+    title: "What I code with",
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        I code with a lot of stuff, but here are some of the things i use
       </span>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <FaCode className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Currently working on",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Personal and professional projects that are in progress.
       </span>
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <FaSuitcase className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "GitHub Contributions",
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        The greenery i like 🌲
       </span>
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
-
   {
     title: "Globe? Why not?",
     description: (
@@ -406,26 +299,26 @@ const items = [
     className: "md:col-span-1",
     icon: <FaGlobeAfrica className="h-4 w-4 text-neutral-500" />,
   },
-  {
-    title: "Text Summarization",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
-    ),
-    header: <SkeletonSix />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Text Summarization",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
-    ),
-    header: <SkeletonSeven />,
-    className: "md:col-span-2",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
+  // {
+  //   title: "Text Summarization",
+  //   description: (
+  //     <span className="text-sm">
+  //       Summarize your lengthy documents with AI technology.
+  //     </span>
+  //   ),
+  //   header: <SkeletonSix />,
+  //   className: "md:col-span-1",
+  //   icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  // },
+  // {
+  //   title: "Text Summarization",
+  //   description: (
+  //     <span className="text-sm">
+  //       Summarize your lengthy documents with AI technology.
+  //     </span>
+  //   ),
+  //   header: <SkeletonSeven />,
+  //   className: "md:col-span-2",
+  //   icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  // },
 ];
