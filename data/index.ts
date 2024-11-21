@@ -1,5 +1,5 @@
 import { projectItems } from "./ProjectsData";
-import { badgesData, certificatesData } from "./BadgesData";
+import { badgesData } from "./BadgesData";
 import {collabProjectItems } from "./CollabProjectsData"
 import { shinySocials } from "./FooterData";
 
@@ -8,5 +8,4 @@ export {
     badgesData, 
     collabProjectItems,
     shinySocials,
-    certificatesData
 }
