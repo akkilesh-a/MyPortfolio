@@ -13,7 +13,7 @@ const Badges = () => {
             <div className='flex flex-col sm:flex-row items-center justify-center flex-wrap gap-16'>
                 {badgesData.map(({href,name,description,fileName},index)=>{
                     return(
-                        <div key={index} className="rounded-xl w-[80vw] p-4 sm:p-10 bg-gray-400 bg-opacity-10">
+                        <div key={index} className="rounded-xl w-[80vw] sm:w-auto p-4 sm:p-10 bg-gray-400 bg-opacity-10">
                             <div className='flex justify-center'>
                                 <Image
                                 src={`/${fileName}`}
