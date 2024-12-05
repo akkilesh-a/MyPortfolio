@@ -17,10 +17,10 @@ export const badgesData=[
         description: "Web Development Bootcamp 2024 ",
         fileName:"certificates/WebDevBootcamp.jpg"
     },
-    {
-        href:"https://leetcode.com/u/Akkilesh_A/",
-        name:"LeetCode",
-        description:"LeetCode Problem Solving",
-        fileName:"badges/LeetCode50.gif"
-    }
+    // {
+    //     href:"https://leetcode.com/u/Akkilesh_A/",
+    //     name:"LeetCode",
+    //     description:"LeetCode Problem Solving",
+    //     fileName:"badges/LeetCode50.gif"
+    // }
 ]

@@ -16,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className={`${inter.className} cursor-custom  bg-customBackground customBackground`}>
+      <body className={`${inter.className} text-white cursor-custom bg-customBackground customBackground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
