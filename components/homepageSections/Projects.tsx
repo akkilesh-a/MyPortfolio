@@ -10,11 +10,11 @@ import VortexWrapper from "../VortexWrapper";
 export function Projects() {
   return (
     <VortexWrapper otherClasses="w-screen px-8 py-8">
-      <section id="projects" className="flex flex-col gap-8">
+      <section id="projects" className="flex flex-col gap-8 justify-center items-center w-full h-full ">
         <Heading text={"Recent Projects"}/>
-        <div className="flex flex-col items-center sm:flex-row gap-16 flex-wrap justify-center">
+        <div className="flex flex-col items-center sm:flex-row pl-96 gap-x-16 w-[90vw] overflow-x-auto no-scrollbar justify-center">
           {projectItems.map((item,index)=>{
-            if(index<3){return(
+            if(index<4){return(
               <CardContainer key={index}>
                 <CardBody className="flex flex-col relative group/card bg-gray-400 hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-opacity-10 border-white/[0.2] w-[80vw] sm:w-[25rem] h-[550px] rounded-xl p-4 pt-6 border  ">
                   <CardItem
