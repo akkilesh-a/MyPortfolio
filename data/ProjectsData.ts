@@ -1,5 +1,35 @@
 export const projectItems=[
     {
+        id:0,
+        title:"TNEB - RAG",
+        description:"RAG Based Chatbot for TNEB. It is a chatbot that helps users to get information about their procedures and other queries related to TNEB.",
+        projectImage:"tneb-rag.png",
+        techStacks:[
+            {
+                id: 1,
+                techStack: "Next.js",
+                image:"/tech-stack/nextjs.svg",
+            },
+            {
+                id: 2,
+                techStack: "Tailwind CSS",
+                image:"/tech-stack/tailwind.svg",
+            },
+            {
+                id: 3,
+                techStack: "Supabase",
+                image:"/tech-stack/supabase.svg",
+            },
+            {
+                id: 4,
+                techStack: "Mistral AI",
+                image:"/tech-stack/mistral-ai.svg",
+            },
+        ],
+        githubLink:"https://github.com/Akkilesh-A/tneb-rag",
+        deployedLink:"https://tneb-rag.vercel.app/",
+    },
+    {
         id:1,
         title:"Resume Copliot 2.0",
         description:"GenAI powered resume feedback web app. Compares provided job description and uploaded resume file and gives match percentage and feedback on areas to improve",
@@ -26,46 +56,6 @@ export const projectItems=[
     },
     {
         id:2,
-        title:"Money Management Web App",
-        description:"A comprehensive money management app for people to track expenses and parent-child tied up accounts for supervision and developing saving habits.",
-        projectImage:"money-manager.png",
-        techStacks:[
-            {
-                id: 1,
-                techStack: "Mongo",
-                image:"/tech-stack/mongodb.svg",
-            },
-            {
-                id: 2,
-                techStack: "Express",
-                image:"/tech-stack/expressjs.svg",
-            },
-            {
-                id: 3,
-                techStack: "React.js",
-                image:"/tech-stack/reactjs.svg",
-            },
-            {
-                id: 4,
-                techStack: "Node",
-                image:"/tech-stack/nodejs.svg",
-            },         
-            {
-                id: 5,
-                techStack: "Tailwind",
-                image:"/tech-stack/tailwind.svg",
-            },
-            {
-                id: 6,
-                techStack: "Redux",
-                image:"/tech-stack/redux.svg",
-            },
-        ],
-        githubLink:"https://github.com/Akkilesh-A/Money-Manager",
-        deployedLink:"https://money-manager-livid.vercel.app/",
-    },
-    {
-        id:3,
         title:"Club Website",
         description:"Official Club website for Humanoidx VITC Club",
         projectImage:"humanoidx-site.gif",
@@ -87,7 +77,7 @@ export const projectItems=[
         deployedLink:"https://humanoidxvitcc.netlify.app/",
     },
     {
-        id:4,
+        id:3,
         title:"Google Search Clone",
         description:"A simple working HTML,CSS Google Search Page clone. One of my very first projects",
         projectImage:"google-clone.png",
