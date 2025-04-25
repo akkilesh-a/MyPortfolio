@@ -12,11 +12,11 @@ export function Projects() {
     <VortexWrapper otherClasses="w-screen px-8 py-8">
       <section id="projects" className="flex flex-col gap-8">
         <Heading text={"Recent Projects"}/>
-        <div className="flex gap-8 flex-wrap justify-center">
+        <div className="flex flex-col items-center sm:flex-row gap-16 flex-wrap justify-center">
           {projectItems.map((item,index)=>{
             if(index<3){return(
-              <CardContainer key={index} className="">
-                <CardBody className=" relative group/card bg-gray-400 hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-opacity-10 backdrop-blur-md border-white/[0.2] w-[80vw] sm:w-[25rem] h-auto rounded-xl p-4 pt-6 border  ">
+              <CardContainer key={index}>
+                <CardBody className="flex flex-col relative group/card bg-gray-400 hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-opacity-10 border-white/[0.2] w-[80vw] sm:w-[25rem] h-[550px] rounded-xl p-4 pt-6 border  ">
                   <CardItem
                     translateZ="50"
                     className="text-xl font-bold text-white"
@@ -30,9 +30,8 @@ export function Projects() {
                   >
                     {item.description}
                   </CardItem>
-                  <CardItem translateZ="100" className="w-full mt-4">
+                  <CardItem translateZ="100" className="w-full flex-1 flex justify-center items-center">
                     <a href={`${item.deployedLink}`} target="__blank">
-                    { item.projectImage.includes(".gif") }
                       <Image
                         
                         src={"/projects/"+item.projectImage}
@@ -43,17 +42,10 @@ export function Projects() {
                       />
                     </a>
                   </CardItem>
-                  <div className="flex justify-between flex-col sm:flex-row gap-2 sm:gap-0 items-center mt-16 sm:mt-20">
-                    
-                    <CardItem
-                      translateZ={20}
-                      
-                      className="px-4 py-2 rounded-xl text-xs font-normal text-white"
-                    >
-                      <div className="flex">
-                        <AnimatedTooltip items={item.techStacks} />
-                      </div>
-                    </CardItem>
+                  <CardItem className="flex justify-between w-full flex-col sm:flex-row gap-2 sm:gap-0 items-center">
+                    <div>
+                      <AnimatedTooltip items={item.techStacks} />
+                    </div>
                     <div className="flex gap-2">
                       <CardItem
                         translateZ={20}
@@ -74,7 +66,7 @@ export function Projects() {
                         <Image alt="github_icon" height={40} width={40} src="/icons/github.svg" />
                       </CardItem>
                     </div>
-                  </div>
+                  </CardItem>
                 </CardBody>
               </CardContainer>
             )}

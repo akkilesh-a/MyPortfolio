@@ -37,10 +37,10 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <>
+    <div className="flex">
       {items.map((item, idx) => (
         <div
-          className="-mr-4  relative group"
+          className="-mr-6 z-[1000] relative group"
           key={item.techStack}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -81,10 +81,10 @@ export const AnimatedTooltip = ({
             width={100}
             src={item.image}
             alt={item.techStack}
-            className="bg-neutral-300 p-2 object-cover !m-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
+            className="bg-neutral-300 scale-75 p-2 object-cover !m-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
           />
         </div>
       ))}
-    </>
+    </div>
   );
 };
