@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="absolute h-screen w-full bg-grid-white/[0.03] flex items-center justify-center"></div>
 
         <div className="h-screen flex justify-center flex-col items-center">
-          <Heading text={"You are in the presence of Greatness! "} />
+          {/* <Heading text={"You are in the presence of Greatness! "} /> */}
 
           {/* Typewriter Animation */}
           <TypewriterEffectSmooth
