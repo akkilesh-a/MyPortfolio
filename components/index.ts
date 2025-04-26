@@ -1,3 +1,3 @@
 import VortexWrapper from "./VortexWrapper";
 
-export { VortexWrapper }
+export { VortexWrapper };

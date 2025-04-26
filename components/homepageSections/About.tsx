@@ -1,47 +1,45 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem, Globe, Heading, IconCloud } from "@/components/ui";
 import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+  BentoGrid,
+  BentoGridItem,
+  Globe,
+  Heading,
+  IconCloud,
+} from "@/components/ui";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import VortexWrapper from "../VortexWrapper";
 import { FaGlobeAfrica, FaSuitcase } from "react-icons/fa";
-import { FaCode, FaPersonRifle, FaUser } from "react-icons/fa6";
+import { FaCode, FaUser } from "react-icons/fa6";
 import { techStacks } from "@/data";
-import GitHubCalendar from "react-github-calendar"
+import GitHubCalendar from "react-github-calendar";
 
 export function About() {
   return (
     <VortexWrapper otherClasses=" w-screen px-8 py-8">
       <section id="about" className="flex flex-col gap-16">
-          <Heading text={"About Me"} />
-          <BentoGrid className="  mx-auto md:auto-rows-[20rem]">
-            {items.map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                header={item.header}
-                className={cn("[&>p:text-lg]", item.className)}
-                icon={item.icon}
-              />
-            ))}
-          </BentoGrid>
+        <Heading text={"About Me"} />
+        <BentoGrid className="  mx-auto md:auto-rows-[20rem]">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={cn("[&>p:text-lg]", item.className)}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>
       </section>
     </VortexWrapper>
-
   );
 }
 
 const SkeletonOne = () => {
-  return(
+  return (
     <div className="relative flex justify-center size-full items-center overflow-hidden">
       <Image
         src="/me.jpg"
@@ -51,14 +49,14 @@ const SkeletonOne = () => {
         className="rounded-xl "
       />
     </div>
-  )
+  );
 };
 const SkeletonTwo = () => {
-  return(
+  return (
     <div className="relative flex justify-center size-full items-center overflow-hidden">
       <IconCloud iconSlugs={techStacks} />
     </div>
-  )
+  );
 };
 const SkeletonThree = () => {
   const variants = {
@@ -91,18 +89,18 @@ const SkeletonThree = () => {
   );
 };
 const SkeletonFour = () => {
-return(
-  <div className="">
-    <GitHubCalendar username="Akkilesh-A" />
-  </div>
-)
+  return (
+    <div className="">
+      <GitHubCalendar username="Akkilesh-A" />
+    </div>
+  );
 };
 const SkeletonFive = () => {
-  return(
+  return (
     <div className="relative flex justify-center size-full items-center overflow-hidden">
       <Globe className="" />
     </div>
-  )
+  );
 };
 const SkeletonSeven = () => {
   const first = {
@@ -280,11 +278,7 @@ const items = [
   },
   {
     title: "GitHub Contributions",
-    description: (
-      <span className="text-sm">
-        The greenery i like 🌲
-      </span>
-    ),
+    description: <span className="text-sm">The greenery i like 🌲</span>,
     header: <SkeletonFour />,
     className: "md:col-span-2",
   },

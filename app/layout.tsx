@@ -20,7 +20,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className={`${inter.className} text-white cursor-custom bg-customBackground customBackground`}>
+      <body
+        className={`${inter.className} text-white cursor-custom bg-customBackground customBackground`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

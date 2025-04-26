@@ -60,9 +60,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        <div className="md:block hidden">
-          Too lazy to scroll? 👉
-        </div>
+        <div className="md:block hidden">Too lazy to scroll? 👉</div>
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
@@ -72,7 +70,9 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.name}</span>
-            <span className="hidden text-sm sm:flex sm:items-center sm:justify-around sm:gap-2">{navItem.icon} {navItem.name}</span>
+            <span className="hidden text-sm sm:flex sm:items-center sm:justify-around sm:gap-2">
+              {navItem.icon} {navItem.name}
+            </span>
           </Link>
         ))}
       </motion.div>

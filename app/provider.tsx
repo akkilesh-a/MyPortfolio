@@ -1,13 +1,15 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { type ThemeProviderProps } from "next-themes/dist/types"
-import { MouseFollower } from "@/components/ui"
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
+import { MouseFollower } from "@/components/ui";
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>
-    <MouseFollower />
-    {children}
+  return (
+    <NextThemesProvider {...props}>
+      <MouseFollower />
+      {children}
     </NextThemesProvider>
+  );
 }

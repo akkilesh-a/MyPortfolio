@@ -22,8 +22,8 @@ const techStacks = [
   "framer",
   "tailwindcss",
   "mongodb",
-    "graphql",
-    "apollo",
+  "graphql",
+  "apollo",
 ];
 
 export { techStacks };
