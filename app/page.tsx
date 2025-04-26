@@ -11,8 +11,21 @@ import {
 import { FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
 import { FaComputer, FaIdBadge, FaUser, FaUserGroup } from "react-icons/fa6";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    // @ts-expect-error - TODO: Fix this
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+  
   return (
     <main className="relative flex justify-center items-center flex-col overflow-hidden mx-auto">
       <FloatingNav
