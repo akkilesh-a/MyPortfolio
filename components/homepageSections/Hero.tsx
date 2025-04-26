@@ -53,6 +53,7 @@ const Hero = () => {
           <a
             href="https://www.linkedin.com/in/akkilesh-a-620561275/"
             target="_blank"
+            className="mt-8"
           >
             <MagicButton
               text="Connect with me"

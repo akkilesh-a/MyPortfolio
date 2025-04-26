@@ -5,7 +5,8 @@ import { badgesData } from "@/data";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { Heading } from "../ui";
+import { Heading, MagicButton } from "../ui";
+import { FaLocationArrow } from "react-icons/fa6";
 
 export default function Badges() {
   const [active, setActive] = useState<
@@ -88,8 +89,8 @@ export default function Badges() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
+                <div className="flex justify-between items-center p-4">
+                  <div>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
                       className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
@@ -103,31 +104,14 @@ export default function Badges() {
                       {active.description}
                     </motion.p>
                   </div>
-
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
-                </div>
-                <div className="pt-4 relative px-4">
-                  {/* <motion.div
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-                    >
-                        {typeof active.content === "function"
-                        ? active.content()
-                        : active.content}
-                    </motion.div> */}
+                  <a href={active.ctaLink}>
+                    <MagicButton
+                      text="Verify Badge"
+                      icon={<FaLocationArrow />}
+                      position={"left"}
+                      otherClasses={"flex items-center gap-4"}
+                    />
+                  </a>
                 </div>
               </div>
             </motion.div>
