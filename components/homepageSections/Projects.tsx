@@ -21,7 +21,7 @@ export function Projects() {
         className="flex flex-col gap-8 justify-center items-center w-full h-full "
       >
         <Heading text={"Recent Projects"} />
-        <div className="flex flex-col items-center sm:flex-row pl-96 gap-x-16 w-[90vw] overflow-x-auto no-scrollbar justify-center">
+        <div className="flex flex-col items-center sm:flex-row sm:pl-96 gap-x-16 w-[90vw] overflow-x-auto no-scrollbar justify-center">
           {projectItems.map((item, index) => {
             if (index < 4) {
               return (
