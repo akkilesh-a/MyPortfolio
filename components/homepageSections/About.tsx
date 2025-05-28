@@ -244,7 +244,7 @@ const SkeletonSix = () => {
 };
 const items = [
   {
-    title: "Yes! this is my face",
+    title: "Yes! this is me",
     description: (
       <span className="text-sm">
         It&apos;s me Akkilesh, the creator of this website.
