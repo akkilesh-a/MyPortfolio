@@ -15,6 +15,13 @@ import { FaGlobeAfrica, FaSuitcase } from "react-icons/fa";
 import { FaCode, FaUser } from "react-icons/fa6";
 import { techStacks } from "@/data";
 import GitHubCalendar from "react-github-calendar";
+import { IconPoint } from "@tabler/icons-react";
+
+const currentProjects = [
+  "Websockets enabled drawing canvas",
+  "AI platform 🤫 (can't talk about it)",
+  "A cross platform gallery app for rangolis"
+];
 
 export function About() {
   return (
@@ -84,21 +91,60 @@ const SkeletonThree = () => {
         backgroundSize: "400% 400%",
       }}
     >
+      <div className="p-4 space-y-2">
+        {currentProjects.map((project, i) => (
+          <div
+            key={i}
+            className="flex items-center text-sm font-semibold text-white"
+          >
+            <IconPoint />
+            <p>{project}</p>
+          </div>
+        ))}
+      </div>
       <motion.div className="h-full w-full rounded-lg"></motion.div>
     </motion.div>
   );
 };
 const SkeletonFour = () => {
   return (
-    <div className="">
-      <GitHubCalendar username="Akkilesh-A" />
+    <div>
+      <div className="hidden md:flex justify-center items-center pt-8">
+        <GitHubCalendar
+          username="Akkilesh-A"
+          colorScheme="dark"
+          blockSize={10}
+          errorMessage="Refresh the page to see the calendar"
+          hideColorLegend
+        />
+      </div>
+      <div className="hidden sm:flex sm:justify-center md:hidden">
+        <GitHubCalendar
+          username="Akkilesh-A"
+          colorScheme="dark"
+          blockSize={6}
+          errorMessage="Refresh the page to see the calendar"
+          hideColorLegend
+        />
+      </div>
+      <div className="flex justify-center sm:hidden">
+        <GitHubCalendar
+          username="Akkilesh-A"
+          colorScheme="dark"
+          blockSize={3.5}
+          errorMessage="Refresh the page to see the calendar"
+          hideColorLegend
+          hideMonthLabels
+          hideTotalCount
+        />
+      </div>
     </div>
   );
 };
 const SkeletonFive = () => {
   return (
     <div className="relative flex justify-center size-full items-center overflow-hidden">
-      <Globe className="" />
+      <Globe />
     </div>
   );
 };
