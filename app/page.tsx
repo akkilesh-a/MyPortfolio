@@ -4,18 +4,16 @@ import {
   Hero,
   Badges,
   Projects,
-  CollabProjects,
   About,
   Footer,
-} from "@/components/homepageSections";
+} from "@/components/homepage-sections";
 import { FloatingNav } from "@/components/ui";
 import { FaHome } from "react-icons/fa";
-import { FaComputer, FaIdBadge, FaUser, FaUserGroup } from "react-icons/fa6";
+import { FaComputer, FaIdBadge, FaUser } from "react-icons/fa6";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
 export default function Home() {
-
   useEffect(() => {
     const lenis = new Lenis();
     // @ts-expect-error - TODO: Fix this
@@ -25,9 +23,9 @@ export default function Home() {
     }
     requestAnimationFrame(raf);
   }, []);
-  
+
   return (
-    <main className="relative flex justify-center items-center flex-col overflow-hidden mx-auto">
+    <main className="relative z-10 flex justify-center items-center flex-col overflow-hidden mx-auto">
       <FloatingNav
         navItems={[
           {
@@ -46,11 +44,6 @@ export default function Home() {
             icon: <FaComputer />,
           },
           {
-            name: "Collab Projects",
-            link: "#collabProjects",
-            icon: <FaUserGroup />,
-          },
-          {
             name: "Badges",
             link: "#badges",
             icon: <FaIdBadge />,
@@ -60,7 +53,6 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
-      <CollabProjects />
       <Badges />
       <Footer />
     </main>

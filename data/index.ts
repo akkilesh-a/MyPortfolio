@@ -1,13 +1,6 @@
-import { projectItems } from "./ProjectsData";
-import { collabProjectItems } from "./CollabProjectsData";
-import { shinySocials } from "./FooterData";
-import { techStacks } from "./TechStacks";
-import { badgesData } from "./BadgesData";
+import { projectItems } from "./projects-data";
+import { shinySocials } from "./footer-data";
+import { techStacks } from "./tech-stacks";
+import { badgesData } from "./badges-data";
 
-export {
-  projectItems,
-  badgesData,
-  collabProjectItems,
-  shinySocials,
-  techStacks,
-};
+export { projectItems, badgesData, shinySocials, techStacks };

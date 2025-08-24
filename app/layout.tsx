@@ -3,6 +3,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { Analytics } from "@vercel/analytics/react";
+import { Galaxy } from "@/components/backgrounds";
 
 const inter = Lexend({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
-        className={`${inter.className} text-white cursor-custom bg-customBackground customBackground`}
+        className={`${inter.className} text-white cursor-custom bg-black customBackground`}
       >
         <Analytics />
         <ThemeProvider
@@ -31,6 +32,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Galaxy />
           {children}
         </ThemeProvider>
       </body>

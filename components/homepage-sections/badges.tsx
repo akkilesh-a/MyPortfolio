@@ -1,12 +1,13 @@
 "use client";
 
-import VortexWrapper from "../VortexWrapper";
 import { badgesData } from "@/data";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { Heading, MagicButton } from "../ui";
+import { MagicButton } from "../ui";
+// import { Heading } from "../ui/heading";
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 export default function Badges() {
   const [active, setActive] = useState<
@@ -35,8 +36,10 @@ export default function Badges() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <VortexWrapper otherClasses="w-screen px-8 py-8 space-y-16">
-      <Heading text={"Badges & Certificates"} />
+    <div className="w-screen px-8 py-8 space-y-16">
+      <p className="m-2 p-2 text-center bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-3xl sm:text-5xl md:text-7xl font-bold relative z-20 bg-clip-text ">
+        <span className="text-transparent">Badges & Certificates</span>
+      </p>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -79,7 +82,7 @@ export default function Badges() {
                 layoutId={`image-${active.title}-${id}`}
                 className="p-3"
               >
-                <img
+                <Image
                   width={200}
                   height={200}
                   src={active.src}
@@ -131,7 +134,7 @@ export default function Badges() {
                 layoutId={`image-${card.title}-${id}`}
                 className="flex justify-center"
               >
-                <img
+                <Image
                   width={90}
                   height={90}
                   src={card.src}
@@ -157,7 +160,7 @@ export default function Badges() {
           </motion.div>
         ))}
       </ul>
-    </VortexWrapper>
+    </div>
   );
 }
 
